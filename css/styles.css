@@ -1,5 +1,79 @@
 @import 'https://fonts.googleapis.com/css?family=Raleway:300,400,500,600,700,800,900';
+/****Loader Animation*****/
 
+.loader{
+    position: fixed;
+    top: 0;
+    left:0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100vh;
+    z-index: 9999;
+    background: rgba(255,255,255,1);
+}
+.sk-cube-grid {
+  width: 40px;
+  height: 40px;
+  margin: 300px auto;
+}
+
+.sk-cube-grid .sk-cube {
+  width: 33%;
+  height: 33%;
+  background-color: #2baf2b;
+  float: left;
+  -webkit-animation: sk-cubeGridScaleDelay 1.3s infinite ease-in-out;
+          animation: sk-cubeGridScaleDelay 1.3s infinite ease-in-out; 
+}
+.sk-cube-grid .sk-cube1 {
+  -webkit-animation-delay: 0.2s;
+          animation-delay: 0.2s; }
+.sk-cube-grid .sk-cube2 {
+  -webkit-animation-delay: 0.3s;
+          animation-delay: 0.3s; }
+.sk-cube-grid .sk-cube3 {
+  -webkit-animation-delay: 0.4s;
+          animation-delay: 0.4s; }
+.sk-cube-grid .sk-cube4 {
+  -webkit-animation-delay: 0.1s;
+          animation-delay: 0.1s; }
+.sk-cube-grid .sk-cube5 {
+  -webkit-animation-delay: 0.2s;
+          animation-delay: 0.2s; }
+.sk-cube-grid .sk-cube6 {
+  -webkit-animation-delay: 0.3s;
+          animation-delay: 0.3s; }
+.sk-cube-grid .sk-cube7 {
+  -webkit-animation-delay: 0s;
+          animation-delay: 0s; }
+.sk-cube-grid .sk-cube8 {
+  -webkit-animation-delay: 0.1s;
+          animation-delay: 0.1s; }
+.sk-cube-grid .sk-cube9 {
+  -webkit-animation-delay: 0.2s;
+          animation-delay: 0.2s; }
+
+@-webkit-keyframes sk-cubeGridScaleDelay {
+  0%, 70%, 100% {
+    -webkit-transform: scale3D(1, 1, 1);
+            transform: scale3D(1, 1, 1);
+  } 35% {
+    -webkit-transform: scale3D(0, 0, 1);
+            transform: scale3D(0, 0, 1); 
+  }
+}
+
+@keyframes sk-cubeGridScaleDelay {
+  0%, 70%, 100% {
+    -webkit-transform: scale3D(1, 1, 1);
+            transform: scale3D(1, 1, 1);
+  } 35% {
+    -webkit-transform: scale3D(0, 0, 1);
+            transform: scale3D(0, 0, 1);
+  } 
+}
+/****Loader Animation Ends*****/
 html {
     color: #222;
     font-size: 1em;
@@ -593,6 +667,125 @@ body{
 }
 ::-webkit-input-placeholder{
    color:#A3A1A1 !important;
+}
+.card-wrapper{
+  margin: 30px 0;
+}
+.card-wrapper .thumbnail {
+  position: relative;
+  background-color: white;
+  box-shadow: rgba(0, 0, 0, 0.0470588) 0px 2px 2px 0px;
+  margin: 0px 8px;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -ms-border-radius: 4px;
+  -o-border-radius: 4px;
+  border-radius: 4px;
+  border: solid rgba(62, 67, 98, 0.109804) 1px;
+  padding: 0;
+  transition: all 0.1s ease;
+  height: 295px;
+}
+.card-wrapper .thumbnail:hover{
+  box-shadow:0px 0px 4px 1px #ccc;
+}
+
+
+.card-wrapper .thumbnail .thumb-image {
+  width: 100%;
+  position: relative;
+}
+.heading{
+  text-align: center;
+}
+
+
+
+
+.card-wrapper .thumbnail .caption {
+  background: #fff;
+}
+
+.card-wrapper .thumbnail .caption h3 {
+  margin: 0 0 10px 0;
+  font-size: 14px;
+  text-decoration: none;
+  color: rgba(75, 76, 92, 0.88);
+  font-weight: 400;
+  letter-spacing: 0.2px;
+  text-align: left;
+}
+
+.card-wrapper .thumbnail .caption h6 {
+  color: rgba(75, 76, 92, 0.66);
+  font-size: 14px;
+  font-weight: 400;
+  letter-spacing: 0.2px;
+  line-height: 14px;
+  margin: 0 0 10px 0;
+}
+
+.card-wrapper .thumbnail .caption p {
+  margin-bottom: 0px;
+  font-size: 14px;
+}
+
+.card-wrapper .thumbnail .caption .extra-info .auther-name {
+  display: inline-block;
+  width: 70%;
+}
+
+.card-wrapper .thumbnail .caption .extra-info .views {
+  width: 28%;
+  display: inline-block;
+  text-align: right;
+}
+
+.card-wrapper .thumbnail .caption .extra-info .views a {
+  color: #666;
+  text-decoration: none;
+  font-size: 12px;
+}
+
+.card-wrapper .thumbnail .caption .extra-info .views a i {
+  padding-right: 3px;
+}
+
+.card-wrapper .thumbnail .actions-info {
+  margin-bottom: 20px;
+}
+
+.card-wrapper .thumbnail .actions-info .save {
+ 
+  text-align: center;
+  text-transform: uppercase;
+  
+  
+}
+
+.card-wrapper .thumbnail .actions-info .save a{
+  color: #fff;
+  text-decoration: none;
+  text-transform: uppercase;
+  background: #2baf2b;
+   width: 50%;
+   padding: 8px 0;
+  font-size: 14px;
+  display: inline-block;
+  transition: all 0.5s ease;
+}
+
+.card-wrapper .thumbnail .actions-info .save a i{
+  padding-right: 3px;
+   color: #fff;
+}
+
+.card-wrapper .thumbnail .actions-info .save a:hover {
+      background: #1e7b1e;
+}
+
+.card-wrapper .thumbnail .actions-info .share {
+  border-left: solid #d5d5d5 1px;
 }
 
 /*--footer start here--*/
